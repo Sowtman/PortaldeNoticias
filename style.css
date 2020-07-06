@@ -1,0 +1,91 @@
+/*Cabeçalho*/
+.logo{
+    width: 150px;
+}
+.header{
+    background-color: #111010;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.header_area{
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 991px)
+{
+    .buscar{
+       margin-left: 200px !important;
+    }    
+}
+
+@media screen and (max-width: 573px)
+{
+    .buscar{
+       margin-left: 10px !important;
+    }
+    
+}
+@media screen and (min-width: 579px) and (max-width: 770px)
+{
+    .buscar{
+       margin-left: 100px !important;
+    }
+    
+}
+
+
+/*Cabeçalho*/
+
+/*Main*/
+.main{
+    background-color: #111010;
+    margin-bottom: 20px;
+    color: white;
+}
+/*Article*/
+.resultado{
+    margin-bottom: 20px;
+    
+}
+.imgNoticia{
+    width: 100% !important;
+    margin-bottom: 15px;
+    float: left;
+}
+#destaque{
+    
+    background-color: #111010 !important;
+}
+#titulo{
+    color: white !important;
+}
+#tela{
+    margin-bottom: 15px;
+}
+#btnSalvar{
+    background-color: whitesmoke !important;
+    color: #111010;
+    
+    display: none;
+}
+#area_btnSalvar{
+    margin-top: 8px;
+}
+.creditos{
+    color: red;
+}
+
+
+/*Article*/
+
+
+/*Main*/
+
+/*Footer*/
+.footer{
+    background-color: #111010;
+    color: white;
+}
+
+
+
+/*Footer*/

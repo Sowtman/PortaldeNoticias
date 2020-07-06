@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick News_Esportes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="exibeEsportes();">
+<!--Modal-->
+<div class="modal" tabindex="-1" role="dialog" id="modalSalvar">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Pesquisas Salvas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="txtTitulo">Titulo do Menu:</label>
+            <input type="text" class="form-control" id="txtTitulo" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="txtPesquisasSalvas">Texto da Pesquisa:</label>
+            <input type="text" class="form-control" id="txtPesquisasSalvas" placeholder="">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">          
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary"  id="btnSalvarPesquisa">Salvar Pesquisa</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal-->
+    <header class="container header">
+
+        <div class="row">
+
+            <div class="col-12 header_area">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-2">
+                        <img src="imagens/logo.png" class="logo">
+                    </div>                     
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-12">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">QN</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link" href="Economia.html">Economia</a>
+                          </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="Esportes.html">Esportes <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="Saude.html">Saúde</a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="Tecnologia.html">Tecnologia</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pesquisas Salvas
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="pesquisasSalvas">
+                            
+                            
+                          </div>
+                        </li>
+                        
+                      </ul>
+                      <div class="form-inline my-4 my-lg-0 buscar">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Digite aqui" aria-label="Search" id="txtPesquisa">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="btnPesquisa">Buscar</button>
+                      </div>
+                    </div>
+                  </nav>
+                    
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+    </header>
+    <main class="container main">
+        <article class="container article">
+          <div class="row resultado">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10" id="destaque">
+              <!-- Image and text -->
+              <h1 id="titulo">Destaques no Brasil:</h1>
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2" id="area_btnSalvar" >
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSalvar" aria-pressed="false" autocomplete="off" id="btnSalvar">
+                Salvar Pesquisa
+               </button>
+            </div>
+            
+          </div>
+            
+            <div class="row" id="tela">
+                
+                                  
+                
+                
+            </div>
+                    
+                
+            
+            
+        </article>
+    </main>
+    <footer class="container footer">
+        <section class="container cards">
+            
+            <div class="row boxes">
+                
+                <div class="col-12 col-sm-12 col-md-8 col-lg-4">
+                    <div class="box1">
+                      <h1>Sobre nós</h1>
+                      <p>Somos um site focado em trazer informação rápida e precisa.</p>
+                      <p>
+                        Com várias notícias diarias sobre  economia, esportes, informática, saúde e política.
+                     </p>
+                     <p>
+                        Nosso portal é totalmente gratuito e sem anúncios! Crie sua conta e receba por email todas as novidades do seu assunto preferido.
+                    </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-4">
+                    <div class="box2">
+                      <h2>Links Rápidos</h2>
+                      <nav class="nav flex-column">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="#">Notícias</a>
+                        <a class="nav-link" href="#">Contatos</a>
+                        <a class="nav-link" href="#">Patrocinadores</a>
+                      </nav>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-4">
+                    <div class="box3">
+                      <h2>Siga-nos:</h2>
+                      <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Twitter</a>
+                        <a href="#" class="list-group-item list-group-item-action">Facebook</a>
+                        <a href="#" class="list-group-item list-group-item-action">Instagram</a>
+                        
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="container direitos">
+          <div class="row autoria">
+              <div class="col-12 area_footer">
+                  <p>
+                      Quick News - Todos os direitos reservados.                         
+                      
+                  </p>         
+              </div>
+              
+              
+          </div>
+      </section>
+        
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
